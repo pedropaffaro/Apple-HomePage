@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/04194459b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Apple</title>
+  </head>
+  <body>
+    <header id="menuBar">
+      <ul id="menuBarItems">
+        <li>
+          <a href="./index.html"
+            ><img class="apple-logo-icon" src="./../img/apple-logo.png" alt=""
+          /></a>
+        </li>
+        <li>Loja</li>
+        <li>Mac</li>
+        <li>iPad</li>
+        <li>iPhone</li>
+        <li>Watch</li>
+        <li>AirPods</li>
+        <li>TV e Casa</li>
+        <li>Entretenimento</li>
+        <li>Acessórios</li>
+        <li>Suporte</li>
+        <li class="search-icon">
+          <img src="./../img/search.svg" alt="" />
+        </li>
+        <li class="market-icon">
+          <img src="./../img/market.svg" alt="" />
+        </li>
+        <li id="items-in-bag"></li>
+      </ul>
+    </header>
+
+    <div class="blockContent">
+      <div class="textContent">
+        <h3 class="title">iPad Pro</h3>
+        <p>Inacreditavelmente fino. Inacreditavelmente poderoso.</p>
+        <!-- <p class="obs">Confira em breve a disponibilidade.</p> -->
+
+        <div class="groupButton">
+          <button class="buttonBlue">Saiba mais</button>
+          <button class="buttonBorderBlue">Ver preços</button>
+        </div>
+
+        <img class="img-block-content" src="./../img/ipad-pro-m4.png" alt="" />
+      </div>
+    </div>
+
+    <div class="grid-content">
+      <div class="container-content ipad-air-conteiner">
+        <img class="img-ipad-air-logo" src="./../img/ipad-air.png" alt="" />
+        <span>
+          <p>Dois tamanhos. Chip mais rápido.</p>
+          <p>Pronto para tudo.</p>
+        </span>
+        <div class="groupButtonSmall">
+          <button class="buttonBlackSmall">Saiba mais</button>
+          <button
+            class="buttonBorderBlackSmall"
+            onclick="addItemsToBag('MacBook Air M3')"
+          >
+            Comprar
+          </button>
+        </div>
+        <img
+          style="width: 50%"
+          src="./../img/Captura_de_Tela_2024-06-02_às_11.44.29-removebg-preview.png"
+          alt=""
+        />
+      </div>
+      <div class="container-content macbook-air">
+        <h1>MacBook Air</h1>
+        <span>
+          <p>Superfino. Superleve. Superchip M3.</p>
+        </span>
+        <div class="groupButtonSmall">
+          <button class="buttonBlueSmall">Saiba mais</button>
+          <button class="buttonBorderBlueSmall">Comprar</button>
+        </div>
+        <img style="width: 47%" src="./../img/macbook-air-m3.png" alt="" />
+      </div>
+    </div>
+
+    <script src="./../js/script.js"></script>
+  </body>
+</html>
