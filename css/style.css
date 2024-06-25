@@ -1,7 +1,10 @@
 :root {
   --dark-color: #1d1d1f;
   --nav-color: rgba(255, 255, 255, 0.8);
+  --nav-dark-color: rgba(0, 0, 0, 0.8);
   --background-blue-button: #0071e3;
+  --white: #ffffff;
+  --footer-color: #f5f5f7;
 }
 
 * {
@@ -11,7 +14,11 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-#menuBar {
+#menuBarDark {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
   width: 100vw;
   height: 7.5vh;
   color: var(--nav-color);
@@ -20,16 +27,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
 
   font-weight: 300;
   font-size: 14px;
   letter-spacing: -0.01em;
 }
 
-#menuBarItems {
+#menuBarItemsDark {
   padding: 0;
-  width: 75%;
+  width: 10%;
   height: 100%;
   list-style: none;
 
@@ -38,59 +44,145 @@
   align-items: center;
 }
 
-#menuBarItems li {
+#menuBarItemsDark li {
   font-size: smaller;
   cursor: pointer;
 
   transition: 0.3s;
 }
 
-#menuBarItems li:hover {
+#menuBarItemsDark li:hover {
   color: white;
 }
 
-.apple-logo-icon {
+#menuBarItemsDark li a {
+  text-decoration: none;
+  color: var(--nav-color);
+}
+
+#menuBarLight {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  width: 100vw;
+  height: 7.5vh;
+  color: var(--nav-dark-color);
+  background-color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+#menuBarItemsLight {
+  padding: 0;
+  width: 75%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+#menuBarItemsLight li {
+  font-size: smaller;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#menuBarItemsLight li:hover {
+  color: black;
+}
+
+#menuBarItemsLight li a {
+  text-decoration: none;
+  color: var(--nav-dark-color);
+}
+
+.apple-logo-icon-light {
   width: 24px;
   height: 18px;
 
   transition: 0.5s;
 }
 
-.apple-logo-icon:hover {
+.apple-logo-icon-light:hover {
   filter: brightness(0) invert(1);
 }
 
-.search-icon img {
+.search-icon-light img {
   width: 14px;
   height: 14px;
 }
 
-.search-icon {
+.search-icon-light {
   transition: 0.3s;
 }
 
-.search-icon:hover {
+.search-icon-light:hover {
   filter: brightness(0) invert(1);
 }
 
-.market-icon img {
+.market-icon-light img {
   width: 15px;
   height: 15px;
 }
 
-.market-icon {
+.market-icon-light span {
   transition: 0.3s;
 }
 
-.market-icon:hover {
+.market-icon-light:hover {
   filter: brightness(0) invert(1);
+}
+
+.apple-logo-icon-dark {
+  width: 24px;
+  height: 18px;
+
+  transition: 0.5s;
+}
+
+.apple-logo-icon-dark:hover {
+  filter: brightness(0);
+}
+
+.search-icon-dark img {
+  width: 14px;
+  height: 14px;
+}
+
+.search-icon-dark {
+  transition: 0.3s;
+}
+
+.search-icon-dark:hover {
+  filter: brightness(0);
+}
+
+.market-icon-dark img {
+  width: 15px;
+  height: 15px;
+}
+
+.market-icon-dark span {
+  transition: 0.3s;
+}
+
+.market-icon-dark:hover {
+  filter: brightness(0);
 }
 
 /* Blocks */
 
 .blockContent {
-  width: 100vw;
-
   background-color: black;
   color: white;
 
@@ -338,4 +430,221 @@
 .macbook-air h1 {
   font-weight: 600;
   font-size: 4cap;
+}
+
+.bag-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.division {
+  width: 70%;
+  border-color: var(--nav-color);
+}
+
+.bag-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  width: 70%;
+
+  margin: 1rem 0 1rem 0;
+}
+
+.info-product-bag {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+
+  overflow-wrap: break-word;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1666666667;
+}
+
+.info-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-item-bag {
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: end;
+}
+
+.remove-item-bag {
+  font-size: 17px;
+  font-weight: 300;
+  color: #0066cc;
+
+  cursor: pointer;
+}
+
+.remove-item-bag:hover {
+  text-decoration: underline;
+}
+
+.title-bag {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem 0 1rem 0;
+}
+
+.title-bag h1 {
+  font-weight: 600;
+  font-size: 4cap;
+  color: var(--dark-color);
+}
+
+.bag-content-img-macbook {
+  width: 220px;
+  height: 150px;
+}
+
+.bag-content-img-ipadair {
+  width: 130px;
+  height: 150px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  color: #333;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 0;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #0000008f;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-legal p {
+  margin: 0;
+}
+
+.footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-legal ul li {
+  margin: 0 10px;
+}
+
+.footer-legal ul li a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.footer-legal ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  #menuBarItemsDark {
+    width: 50%;
+  }
+
+  .groupButton button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .groupButtonSmall button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+  }
+
+  .grid-content {
+    grid-template-columns: 1fr;
+  }
+
+  .bag-content {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .info-product-bag {
+    grid-template-columns: 1fr;
+  }
+
+  .price-item-bag {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
