@@ -601,6 +601,14 @@ footer {
     width: 50%;
   }
 
+  .textContent p {
+    text-align: center;
+  }
+
+  .img-block-content {
+    width: 80%;
+  }
+
   .groupButton button {
     display: flex;
     flex-direction: column;
